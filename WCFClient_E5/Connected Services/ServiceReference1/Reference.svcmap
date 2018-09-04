@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f2bd90b8-09d9-4d98-9aef-f668598113ec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.31.12:8099/AccountsService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AccountsService.xsd" MetadataType="Schema" ID="6465d3b1-7ac0-4477-b696-ce11e35bd356" SourceId="1" SourceUrl="http://192.168.31.12:8099/AccountsService?xsd=xsd1" />
+    <MetadataFile FileName="AccountsService.disco" MetadataType="Disco" ID="729e605c-c36a-412a-9730-ccf037123340" SourceId="1" SourceUrl="http://192.168.31.12:8099/AccountsService?disco" />
+    <MetadataFile FileName="AccountsService1.xsd" MetadataType="Schema" ID="941c058a-5916-445c-ad48-7546841bdbad" SourceId="1" SourceUrl="http://192.168.31.12:8099/AccountsService?xsd=xsd0" />
+    <MetadataFile FileName="ServiceMethods.wsdl" MetadataType="Wsdl" ID="3a25685d-e4c7-4cae-aa9c-3387688ec788" SourceId="1" SourceUrl="http://192.168.31.12:8099/AccountsService?wsdl" />
+    <MetadataFile FileName="AccountsService2.xsd" MetadataType="Schema" ID="ed7e9dd8-0d96-42e8-b048-46c70a954382" SourceId="1" SourceUrl="http://192.168.31.12:8099/AccountsService?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
