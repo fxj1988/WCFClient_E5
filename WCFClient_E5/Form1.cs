@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Reflection;
 using System.Runtime.Remoting.Messaging;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +27,7 @@ namespace WCFClient_E5
             client = new ServiceContractClient();
             labTime.Text += client.GetDateTime().ToShortTimeString();
             gb = new GroupBox();
+            txtTime.Text = "100";
         }
         #region 已完成的方法
         //按钮—获得所有的用户信息
@@ -187,26 +190,26 @@ namespace WCFClient_E5
         //数据库写入随机地址
         private void btnRdmAddr_Click(object sender, EventArgs e)
         {
-            while (true)
-            {
-                Accounts userInfo = client.GetNoneAddr();
-                userInfo.shippingUserFistName = RandomAddr.getFirstName();
-                userInfo.shippingUserLastName = RandomAddr.getLastName();
-                userInfo.daytimePhoneAreaCode = "010";
-                if (userInfo.ID % 2 == 0)
-                {
-                    userInfo.daytimePhone = RandomAddr.GetTel("170");
-                }
-                else
-                {
-                    userInfo.daytimePhone = RandomAddr.GetTel("171");
-                }
-                userInfo.shippingUserStreet1 = RandomAddr.getStreet1FT() + "更";
-                userInfo.shippingUserStreet2 = RandomAddr.getRoomNumber() + RandomAddr.GetSubject();
-                userInfo.district = "丰台区";
-                userInfo.postalCode = "101171";
-                client.EditUserInfo(userInfo);
-            }
+            Accounts[] userInfos = client.GetAllUserInfos();
+                Parallel.ForEach(userInfos,(userInfo) =>
+                {   
+                    userInfo.shippingUserFistName = RandomAddr.getFirstName();
+                    userInfo.shippingUserLastName = RandomAddr.getLastName();
+                    userInfo.daytimePhoneAreaCode = "010";
+                    if (userInfo.ID % 2 == 0)
+                    {
+                        userInfo.daytimePhone = RandomAddr.GetTel("170");
+                    }
+                    else
+                    {
+                        userInfo.daytimePhone = RandomAddr.GetTel("171");
+                    }
+                    userInfo.shippingUserStreet1 = RandomAddr.getStreet1FT() + "更";
+                    userInfo.shippingUserStreet2 = RandomAddr.getRoomNumber() + RandomAddr.GetSubject();
+                    userInfo.district = "丰台区";
+                    userInfo.postalCode = "101171";
+                    client.EditUserInfo(userInfo);
+                });         
         }
         //异步执行登陆测试
         delegate void delegateTryAsyncLoginTest();
@@ -221,5 +224,74 @@ namespace WCFClient_E5
             }), null);
         }
         #endregion
+
+        private void btnBuyPhone_Click(object sender, EventArgs e)
+        {
+            string path = @"..\Log";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            string fullPath = Path.GetFullPath(path + DateTime.Now.ToString("yyyyMMdd") + ".txt");
+            SpinLock slock = new SpinLock(false);
+            SpinLock slock2 = new SpinLock(false);
+            OrderMethods orderMethods=  new OrderMethods();
+            while (true)
+            {
+                Accounts userInfo = client.GetAUserInfo(new Random().Next(6542));
+                userInfo.remarks = "下单中";
+                userInfo = orderMethods.BuyPhone(userInfo, Convert.ToInt32(txtTime.Text));
+                client.EditUserInfo(userInfo);
+                using (FileStream fr = new FileStream(fullPath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite, 1024, true))
+                {
+                    fr.Position = fr.Length;
+                    byte[] buffer = Encoding.UTF8.GetBytes(userInfo.ID + userInfo.remarks + "\r\n");
+                    Task.Factory.FromAsync(fr.BeginWrite, fr.EndWrite, buffer, 0, buffer.Length, null);
+                }
+                #region Parallel
+                //Parallel.For(0, Convert.ToInt32(txtParNumber.Text), (i) =>
+                //{
+                //    bool lockTaken = false;
+                //    bool lockTaken2 = false;
+                //    try
+                //    {
+                //        slock.Enter(ref lockTaken);
+                //        userInfo = entityService.Accounts.Where((u) => u.remarks == null).FirstOrDefault();
+                //        userInfo.remarks = "下单中";
+                //        entityService.Entry(userInfo).State = EntityState.Modified;
+                //        entityService.SaveChanges();
+                //    }
+                //    finally 
+                //    {
+                //        if (lockTaken)
+                //        {
+                //            slock.Exit(false);  
+                //        };
+                //    }
+                //    userInfo = new iPhone7().BuyPhone(userInfo, Convert.ToInt32(txtTime.Text));
+                //    try
+                //    {
+                //        slock2.Enter(ref lockTaken2);
+                //        entityService.Entry(userInfo).State = EntityState.Modified;
+                //        entityService.SaveChanges();
+                //        //异步写入
+                //        using (FileStream fr = new FileStream(fullPath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite, 1024, true))
+                //        {
+                //            fr.Position = fr.Length;
+                //            byte[] buffer = Encoding.UTF8.GetBytes(userInfo.ID + userInfo.remarks + "\r\n");
+                //            Task.Factory.FromAsync(fr.BeginWrite, fr.EndWrite, buffer, 0, buffer.Length, null);
+                //        }
+                //    }
+                //    finally
+                //    {
+                //        if (lockTaken2)
+                //        {
+                //            slock2.Exit(false);
+                //        };
+                //    }
+                //});
+                #endregion
+            }
+        }
     }
 }

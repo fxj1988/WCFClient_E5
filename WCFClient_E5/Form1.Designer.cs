@@ -39,15 +39,19 @@
             this.labHostStatus = new System.Windows.Forms.Label();
             this.btnRdmAddr = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuyPhone = new System.Windows.Forms.Button();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtParNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConWcf
             // 
-            this.btnConWcf.Location = new System.Drawing.Point(16, 15);
-            this.btnConWcf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConWcf.Location = new System.Drawing.Point(12, 12);
             this.btnConWcf.Name = "btnConWcf";
-            this.btnConWcf.Size = new System.Drawing.Size(100, 29);
+            this.btnConWcf.Size = new System.Drawing.Size(75, 23);
             this.btnConWcf.TabIndex = 1;
             this.btnConWcf.Text = "连接局域网WCF";
             this.btnConWcf.UseVisualStyleBackColor = true;
@@ -55,10 +59,9 @@
             // 
             // btnUserInfo
             // 
-            this.btnUserInfo.Location = new System.Drawing.Point(137, 15);
-            this.btnUserInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUserInfo.Location = new System.Drawing.Point(103, 12);
             this.btnUserInfo.Name = "btnUserInfo";
-            this.btnUserInfo.Size = new System.Drawing.Size(100, 29);
+            this.btnUserInfo.Size = new System.Drawing.Size(75, 23);
             this.btnUserInfo.TabIndex = 4;
             this.btnUserInfo.Text = "根据ID获得用户信息";
             this.btnUserInfo.UseVisualStyleBackColor = true;
@@ -66,19 +69,17 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(245, 15);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Location = new System.Drawing.Point(184, 12);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(132, 25);
+            this.txtID.Size = new System.Drawing.Size(100, 21);
             this.txtID.TabIndex = 5;
             this.txtID.Text = "1";
             // 
             // btnEditUserInfo
             // 
-            this.btnEditUserInfo.Location = new System.Drawing.Point(387, 12);
-            this.btnEditUserInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditUserInfo.Location = new System.Drawing.Point(290, 10);
             this.btnEditUserInfo.Name = "btnEditUserInfo";
-            this.btnEditUserInfo.Size = new System.Drawing.Size(100, 29);
+            this.btnEditUserInfo.Size = new System.Drawing.Size(75, 23);
             this.btnEditUserInfo.TabIndex = 6;
             this.btnEditUserInfo.Text = "修改";
             this.btnEditUserInfo.UseVisualStyleBackColor = true;
@@ -86,10 +87,9 @@
             // 
             // asyGetUserInfo
             // 
-            this.asyGetUserInfo.Location = new System.Drawing.Point(495, 12);
-            this.asyGetUserInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.asyGetUserInfo.Location = new System.Drawing.Point(371, 10);
             this.asyGetUserInfo.Name = "asyGetUserInfo";
-            this.asyGetUserInfo.Size = new System.Drawing.Size(133, 29);
+            this.asyGetUserInfo.Size = new System.Drawing.Size(100, 23);
             this.asyGetUserInfo.TabIndex = 9;
             this.asyGetUserInfo.Text = "异步登陆测试";
             this.asyGetUserInfo.UseVisualStyleBackColor = true;
@@ -98,19 +98,17 @@
             // labTime
             // 
             this.labTime.AutoSize = true;
-            this.labTime.Location = new System.Drawing.Point(304, 58);
-            this.labTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labTime.Location = new System.Drawing.Point(228, 46);
             this.labTime.Name = "labTime";
-            this.labTime.Size = new System.Drawing.Size(97, 15);
+            this.labTime.Size = new System.Drawing.Size(77, 12);
             this.labTime.TabIndex = 11;
             this.labTime.Text = "服务器时间：";
             // 
             // parallelLoginTest
             // 
-            this.parallelLoginTest.Location = new System.Drawing.Point(636, 12);
-            this.parallelLoginTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.parallelLoginTest.Location = new System.Drawing.Point(477, 10);
             this.parallelLoginTest.Name = "parallelLoginTest";
-            this.parallelLoginTest.Size = new System.Drawing.Size(133, 29);
+            this.parallelLoginTest.Size = new System.Drawing.Size(100, 23);
             this.parallelLoginTest.TabIndex = 12;
             this.parallelLoginTest.Text = "Parallel登陆测试";
             this.parallelLoginTest.UseVisualStyleBackColor = true;
@@ -121,10 +119,9 @@
             this.labHostState.AutoSize = true;
             this.labHostState.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labHostState.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labHostState.Location = new System.Drawing.Point(16, 51);
-            this.labHostState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labHostState.Location = new System.Drawing.Point(12, 41);
             this.labHostState.Name = "labHostState";
-            this.labHostState.Size = new System.Drawing.Size(120, 25);
+            this.labHostState.Size = new System.Drawing.Size(93, 19);
             this.labHostState.TabIndex = 13;
             this.labHostState.Text = "服务端状态：";
             this.labHostState.Click += new System.EventHandler(this.labHostState_Click);
@@ -132,18 +129,17 @@
             // labHostStatus
             // 
             this.labHostStatus.AutoSize = true;
-            this.labHostStatus.Location = new System.Drawing.Point(137, 59);
-            this.labHostStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labHostStatus.Location = new System.Drawing.Point(103, 47);
             this.labHostStatus.Name = "labHostStatus";
-            this.labHostStatus.Size = new System.Drawing.Size(0, 15);
+            this.labHostStatus.Size = new System.Drawing.Size(0, 12);
             this.labHostStatus.TabIndex = 14;
             // 
             // btnRdmAddr
             // 
-            this.btnRdmAddr.Location = new System.Drawing.Point(920, 8);
-            this.btnRdmAddr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRdmAddr.Location = new System.Drawing.Point(690, 6);
+            this.btnRdmAddr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRdmAddr.Name = "btnRdmAddr";
-            this.btnRdmAddr.Size = new System.Drawing.Size(128, 36);
+            this.btnRdmAddr.Size = new System.Drawing.Size(96, 29);
             this.btnRdmAddr.TabIndex = 15;
             this.btnRdmAddr.Text = "生成地址";
             this.btnRdmAddr.UseVisualStyleBackColor = true;
@@ -152,17 +148,71 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(506, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(380, 54);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 472);
+            this.dataGridView1.Size = new System.Drawing.Size(406, 378);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // btnBuyPhone
+            // 
+            this.btnBuyPhone.Location = new System.Drawing.Point(380, 459);
+            this.btnBuyPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuyPhone.Name = "btnBuyPhone";
+            this.btnBuyPhone.Size = new System.Drawing.Size(73, 60);
+            this.btnBuyPhone.TabIndex = 17;
+            this.btnBuyPhone.Text = "试买手机";
+            this.btnBuyPhone.UseVisualStyleBackColor = true;
+            this.btnBuyPhone.Click += new System.EventHandler(this.btnBuyPhone_Click);
+            // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(103, 90);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(76, 21);
+            this.txtTime.TabIndex = 18;
+            // 
+            // txtParNumber
+            // 
+            this.txtParNumber.Location = new System.Drawing.Point(103, 114);
+            this.txtParNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParNumber.Name = "txtParNumber";
+            this.txtParNumber.Size = new System.Drawing.Size(76, 21);
+            this.txtParNumber.TabIndex = 19;
+            this.txtParNumber.Text = "5";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1, 92);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "status时间间隔";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "线程数";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 795);
+            this.ClientSize = new System.Drawing.Size(797, 636);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtParNumber);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.btnBuyPhone);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRdmAddr);
             this.Controls.Add(this.labHostStatus);
@@ -174,7 +224,6 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnUserInfo);
             this.Controls.Add(this.btnConWcf);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "WCFClient";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -196,6 +245,11 @@
         private System.Windows.Forms.Label labHostStatus;
         private System.Windows.Forms.Button btnRdmAddr;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnBuyPhone;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.TextBox txtParNumber;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
