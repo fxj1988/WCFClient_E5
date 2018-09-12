@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="E5_2680V2_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="loginAppleId" Type="nvarchar" MaxLength="255" />
+    <Property Name="loginPassword" Type="nvarchar" MaxLength="255" />
+    <Property Name="shippingUserLastName" Type="nvarchar" MaxLength="255" />
+    <Property Name="shippingUserFistName" Type="nvarchar" MaxLength="255" />
+    <Property Name="daytimePhoneAreaCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="daytimePhone" Type="nvarchar" MaxLength="255" />
+    <Property Name="shippingUserStreet1" Type="nvarchar" MaxLength="255" />
+    <Property Name="shippingUserStreet2" Type="nvarchar" MaxLength="255" />
+    <Property Name="district" Type="nvarchar" MaxLength="255" />
+    <Property Name="postalCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="wCount" Type="nvarchar" MaxLength="255" />
+    <Property Name="w1" Type="nvarchar" MaxLength="255" />
+    <Property Name="w1detail" Type="nvarchar(max)" />
+    <Property Name="w1Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="w2" Type="nvarchar" MaxLength="255" />
+    <Property Name="w2detail" Type="nvarchar" MaxLength="255" />
+    <Property Name="w2Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="w3" Type="nvarchar" MaxLength="255" />
+    <Property Name="w3detail" Type="nvarchar" MaxLength="255" />
+    <Property Name="w3Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="cookies" Type="nvarchar" MaxLength="255" />
+    <Property Name="cancelUrl" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="E5_2680V2_ModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

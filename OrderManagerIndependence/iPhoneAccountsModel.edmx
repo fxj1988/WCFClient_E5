@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="E5_2680V2_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="loginAppleId" Type="nvarchar" MaxLength="255" />
+          <Property Name="loginPassword" Type="nvarchar" MaxLength="255" />
+          <Property Name="shippingUserLastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="shippingUserFistName" Type="nvarchar" MaxLength="255" />
+          <Property Name="daytimePhoneAreaCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="daytimePhone" Type="nvarchar" MaxLength="255" />
+          <Property Name="shippingUserStreet1" Type="nvarchar" MaxLength="255" />
+          <Property Name="shippingUserStreet2" Type="nvarchar" MaxLength="255" />
+          <Property Name="district" Type="nvarchar" MaxLength="255" />
+          <Property Name="postalCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="wCount" Type="nvarchar" MaxLength="255" />
+          <Property Name="w1" Type="nvarchar" MaxLength="255" />
+          <Property Name="w1detail" Type="nvarchar(max)" />
+          <Property Name="w1Remark" Type="nvarchar" MaxLength="255" />
+          <Property Name="w2" Type="nvarchar" MaxLength="255" />
+          <Property Name="w2detail" Type="nvarchar" MaxLength="255" />
+          <Property Name="w2Remark" Type="nvarchar" MaxLength="255" />
+          <Property Name="w3" Type="nvarchar" MaxLength="255" />
+          <Property Name="w3detail" Type="nvarchar" MaxLength="255" />
+          <Property Name="w3Remark" Type="nvarchar" MaxLength="255" />
+          <Property Name="remarks" Type="nvarchar" MaxLength="255" />
+          <Property Name="cookies" Type="nvarchar" MaxLength="255" />
+          <Property Name="cancelUrl" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="E5_2680V2_ModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="E5_2680V2_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="loginAppleId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="loginPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="shippingUserLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="shippingUserFistName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="daytimePhoneAreaCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="daytimePhone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="shippingUserStreet1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="shippingUserStreet2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="district" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="postalCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="wCount" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w1detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="w1Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w2detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w2Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w3detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="w3Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="cookies" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="cancelUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="E5_2680V2_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="E5_2680V2_ModelStoreContainer" CdmEntityContainer="E5_2680V2_Entities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="E5_2680V2_Model.Accounts">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="loginAppleId" ColumnName="loginAppleId" />
+                <ScalarProperty Name="loginPassword" ColumnName="loginPassword" />
+                <ScalarProperty Name="shippingUserLastName" ColumnName="shippingUserLastName" />
+                <ScalarProperty Name="shippingUserFistName" ColumnName="shippingUserFistName" />
+                <ScalarProperty Name="daytimePhoneAreaCode" ColumnName="daytimePhoneAreaCode" />
+                <ScalarProperty Name="daytimePhone" ColumnName="daytimePhone" />
+                <ScalarProperty Name="shippingUserStreet1" ColumnName="shippingUserStreet1" />
+                <ScalarProperty Name="shippingUserStreet2" ColumnName="shippingUserStreet2" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+                <ScalarProperty Name="wCount" ColumnName="wCount" />
+                <ScalarProperty Name="w1" ColumnName="w1" />
+                <ScalarProperty Name="w1detail" ColumnName="w1detail" />
+                <ScalarProperty Name="w1Remark" ColumnName="w1Remark" />
+                <ScalarProperty Name="w2" ColumnName="w2" />
+                <ScalarProperty Name="w2detail" ColumnName="w2detail" />
+                <ScalarProperty Name="w2Remark" ColumnName="w2Remark" />
+                <ScalarProperty Name="w3" ColumnName="w3" />
+                <ScalarProperty Name="w3detail" ColumnName="w3detail" />
+                <ScalarProperty Name="w3Remark" ColumnName="w3Remark" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="cookies" ColumnName="cookies" />
+                <ScalarProperty Name="cancelUrl" ColumnName="cancelUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

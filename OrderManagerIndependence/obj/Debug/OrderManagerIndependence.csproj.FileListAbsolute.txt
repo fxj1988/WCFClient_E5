@@ -1,0 +1,16 @@
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\OrderManagerIndependence.exe.config
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\OrderManagerIndependence.exe
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\OrderManagerIndependence.pdb
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\EntityFramework.dll
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\EntityFramework.SqlServer.dll
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\EntityFramework.xml
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\EntityFramework.SqlServer.xml
+D:\WCFClient_E5\OrderManagerIndependence\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.csprojAssemblyReference.cache
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.OrderManagerIndependence.resources
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.Properties.Resources.resources
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.csproj.GenerateResource.cache
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.csproj.CoreCompileInputs.cache
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.csproj.CopyComplete
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.exe
+D:\WCFClient_E5\OrderManagerIndependence\obj\Debug\OrderManagerIndependence.pdb

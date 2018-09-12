@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="E5_2680V2_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="loginAppleId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="loginPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="shippingUserLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="shippingUserFistName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="daytimePhoneAreaCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="daytimePhone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="shippingUserStreet1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="shippingUserStreet2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="district" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="postalCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="wCount" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w1detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="w1Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w2detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w2Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w3detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="w3Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cookies" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cancelUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="E5_2680V2_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" />
+  </EntityContainer>
+</Schema>

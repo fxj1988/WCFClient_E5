@@ -8,3 +8,9 @@ D:\WCFClient_E5\WCFClient_E5\obj\Debug\WCFClient_E5.csproj.GenerateResource.cach
 D:\WCFClient_E5\WCFClient_E5\obj\Debug\WCFClient_E5.csproj.CoreCompileInputs.cache
 D:\WCFClient_E5\WCFClient_E5\obj\Debug\WCFClient_E5.exe
 D:\WCFClient_E5\WCFClient_E5\obj\Debug\WCFClient_E5.pdb
+D:\WCFClient_E5\WCFClient_E5\bin\Debug\EntityFramework.dll
+D:\WCFClient_E5\WCFClient_E5\bin\Debug\EntityFramework.SqlServer.dll
+D:\WCFClient_E5\WCFClient_E5\bin\Debug\EntityFramework.xml
+D:\WCFClient_E5\WCFClient_E5\bin\Debug\EntityFramework.SqlServer.xml
+D:\WCFClient_E5\WCFClient_E5\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\WCFClient_E5\WCFClient_E5\obj\Debug\WCFClient_E5.csproj.CopyComplete

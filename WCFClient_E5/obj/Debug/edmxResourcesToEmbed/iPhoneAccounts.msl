@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="E5_2680V2_ModelStoreContainer" CdmEntityContainer="E5_2680V2_Entities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="E5_2680V2_Model.Accounts">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="loginAppleId" ColumnName="loginAppleId" />
+          <ScalarProperty Name="loginPassword" ColumnName="loginPassword" />
+          <ScalarProperty Name="shippingUserLastName" ColumnName="shippingUserLastName" />
+          <ScalarProperty Name="shippingUserFistName" ColumnName="shippingUserFistName" />
+          <ScalarProperty Name="daytimePhoneAreaCode" ColumnName="daytimePhoneAreaCode" />
+          <ScalarProperty Name="daytimePhone" ColumnName="daytimePhone" />
+          <ScalarProperty Name="shippingUserStreet1" ColumnName="shippingUserStreet1" />
+          <ScalarProperty Name="shippingUserStreet2" ColumnName="shippingUserStreet2" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+          <ScalarProperty Name="wCount" ColumnName="wCount" />
+          <ScalarProperty Name="w1" ColumnName="w1" />
+          <ScalarProperty Name="w1detail" ColumnName="w1detail" />
+          <ScalarProperty Name="w1Remark" ColumnName="w1Remark" />
+          <ScalarProperty Name="w2" ColumnName="w2" />
+          <ScalarProperty Name="w2detail" ColumnName="w2detail" />
+          <ScalarProperty Name="w2Remark" ColumnName="w2Remark" />
+          <ScalarProperty Name="w3" ColumnName="w3" />
+          <ScalarProperty Name="w3detail" ColumnName="w3detail" />
+          <ScalarProperty Name="w3Remark" ColumnName="w3Remark" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="cookies" ColumnName="cookies" />
+          <ScalarProperty Name="cancelUrl" ColumnName="cancelUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -137,7 +137,7 @@
             // btnRdmAddr
             // 
             this.btnRdmAddr.Location = new System.Drawing.Point(690, 6);
-            this.btnRdmAddr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRdmAddr.Margin = new System.Windows.Forms.Padding(2);
             this.btnRdmAddr.Name = "btnRdmAddr";
             this.btnRdmAddr.Size = new System.Drawing.Size(96, 29);
             this.btnRdmAddr.TabIndex = 15;
@@ -149,7 +149,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(380, 54);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(406, 378);
@@ -158,7 +158,7 @@
             // btnBuyPhone
             // 
             this.btnBuyPhone.Location = new System.Drawing.Point(380, 459);
-            this.btnBuyPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuyPhone.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuyPhone.Name = "btnBuyPhone";
             this.btnBuyPhone.Size = new System.Drawing.Size(73, 60);
             this.btnBuyPhone.TabIndex = 17;
@@ -169,15 +169,16 @@
             // txtTime
             // 
             this.txtTime.Location = new System.Drawing.Point(103, 90);
-            this.txtTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(2);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(76, 21);
             this.txtTime.TabIndex = 18;
+            this.txtTime.Text = "500";
             // 
             // txtParNumber
             // 
             this.txtParNumber.Location = new System.Drawing.Point(103, 114);
-            this.txtParNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtParNumber.Name = "txtParNumber";
             this.txtParNumber.Size = new System.Drawing.Size(76, 21);
             this.txtParNumber.TabIndex = 19;

@@ -114,26 +114,28 @@ namespace WCFClient_E5
             }
         }
 
-        public Accounts BuyPhone(Accounts userInfo, int timeInterval)
+        public Accounts BuyPhone(Accounts userInfo, int timeInterval=500)
         {
+            string[] iPhone_x = {"x","5.8","64","silver", "MQA62CH","1", "IPHONEX_GSM" };
+
+            #region 参数和初始
             HttpHelper http = new HttpHelper();
-            #region 参数和初始cookie
             string id = HttpUtility.UrlEncode(userInfo.loginAppleId);
             string pwd = HttpUtility.UrlEncode(userInfo.loginPassword);
             string cookie = "";
-            string iphone = "x";
-            string size = "5.8";
-            string gb = "64";
-            string col = "silver";
-            string product = "MQA62CH";
+            string iphone = iPhone_x[0];
+            string size = iPhone_x[1];
+            string gb = iPhone_x[2];
+            string col = iPhone_x[3];
+            string product = iPhone_x[4];
             string screensize = size.Replace('.', '_');
-            string quantity = "1";
-            string IPHONEX_GSM = "IPHONEX_GSM";
-           
-            //https://www.apple.com/cn/shop/buy-iphone/iphone-x/MQA62CH/A?product=MQA62CH%2FA&purchaseOption=fullPrice&step=select&atbtoken=6a8207ac1f4d564c6696649f9c87c3d22d7dc8c1&complete=true&dimensionCapacity=64gb&dimensionColor=silver&dimensionScreensize=5_8inch&part=IPHONEX_GSM&add-to-cart=add-to-cart
-            string userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36";
-            #endregion 
+            string quantity = iPhone_x[5];
+            string IPHONEX_GSM = iPhone_x[6];
             string url_product = string.Format(@"https://www.apple.com/cn/shop/buy-iphone/iphone-{0}?product={1}/A", iphone, product);
+            string userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36";
+            //https://www.apple.com/cn/shop/buy-iphone/iphone-x/MQA62CH/A?product=MQA62CH%2FA&purchaseOption=fullPrice&step=select&atbtoken=6a8207ac1f4d564c6696649f9c87c3d22d7dc8c1&complete=true&dimensionCapacity=64gb&dimensionColor=silver&dimensionScreensize=5_8inch&part=IPHONEX_GSM&add-to-cart=add-to-cart
+            #endregion
+
             #region cn/shop/buy-iphone/iphone-x/MQA62CH/A 
             HttpResult result = new HttpResult();
             HttpItem item = new HttpItem()
@@ -330,6 +332,7 @@ namespace WCFClient_E5
             #endregion
 
             #region 点击继续同意苹果条款和条件。
+            
             string data_checkoutx_fifth = string.Format("sessionID={0}&accept=true&acceptAppleTnc=false&_a=terms.cont&_fid=co",
             para_sessionID);
             item.Cookie = cookie;
